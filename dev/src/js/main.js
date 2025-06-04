@@ -2,20 +2,18 @@ $(document).ready(function(){
 	//calls functions
 });
 
-$(window).on('load', function () {
-	//calls functions
+var animationBull = bodymovin.loadAnimation({
+	container: document.getElementById("bull-animation"),
+	renderer: "svg",
+	loop: true,
+	autoplay: true,
+	path: "../bull_animation.json"
 });
 
-$(window).on('resize', function () {
-	//calls functions
+var animationBgBull = bodymovin.loadAnimation({
+	container: document.getElementById("bg-bull-animation"),
+	renderer: "svg",
+	autoplay: !0,
+	path: "../bg_bull_animation.json"
 });
-
-$(window).load(function() {
-	//calls functions
-});
-
-$(window).scroll(function() {
-	//calls functions
-});
-
-//functions
+animationBgBull.setSpeed(2);

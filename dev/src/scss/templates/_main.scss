@@ -4,3 +4,297 @@
 // @import 'icons';
 
 // @import 'includes/plugins';
+
+.logo {
+	flex-shrink: 0;
+}
+
+.section-primary {
+	padding: 78px 0 0;
+	background: #DCDCDC url("../images/primary-section-bg.svg") no-repeat 0 84% / cover;
+
+	.cols {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		&.second {
+			margin-bottom: 0;
+			align-items: start;
+		}
+	}
+
+	.title {
+		margin-bottom: 30px;
+		padding: 4px 0 4px 10px;
+		font-weight: 700;
+		position: relative;
+		display: inline-flex;
+    	align-items: center;
+
+    	.primary-text {
+    		margin: 0 8px;
+    	}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 3px;
+			height: 100%;
+			border-radius: 2px;
+			background-color: var(--red, #E10000);
+			box-shadow: 0px 2px 6px 0px rgba(225, 0, 0, 0.20);
+		}
+	}
+
+	.info {
+		text-align: center;
+		flex-grow: 1;
+		margin-left: -90px;
+		padding-left: 20px;
+	}
+
+	.ml-20 {
+		margin-left: 20px;
+	}
+}
+
+.heading-block {
+	flex-grow: 1;
+	margin-left: 86px;
+}
+
+.heading {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+
+.heading-text {
+	font-size: 15px;
+	color: var(--grey2, #544F4F);
+	line-height: 1.5;
+
+	&.second {
+		font-size: 16px;
+		font-weight: 700;
+		color: var(--defolt_dark, #272626);
+	}
+}
+
+.bull-block {
+	margin: -30px 0 0 -50px;
+	position: relative;
+	width: 580px;
+	flex-shrink: 0;
+	z-index: 1;
+	background: url("../images/bg-bull.svg") no-repeat 14px -45px / contain;
+	background-size: 86%;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.smoke {
+	width: 234px;
+	position: absolute;
+	right: 60px;
+    bottom: 15px;
+	z-index: 3;
+
+	svg {
+		display: block;
+	}
+}
+
+.bg-bull {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.headline {
+	text-align: center;
+
+	.title {
+		margin-bottom: 8px;
+	}
+
+	.sub-text {
+		font-weight: 500;
+	}
+}
+
+.main {
+	margin-bottom: 190px;
+}
+
+.section {
+	position: relative;
+
+	&.top-bg {
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 146px;
+			background: url("../images/decor-up-white.svg") no-repeat center / cover;
+		}
+	}
+	&.bottom-bg {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 146px;
+			transform: rotate(180deg);
+			background: url("../images/decor-up-white.svg") no-repeat center / cover;
+			z-index: 1;
+		}
+	}
+	&.grey {
+		background-color: #DFDFDF;
+		padding: 176px;
+	}
+}
+
+.custom-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.custom-wrap {
+	width: 300px;
+	height: 164px;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.left {
+    	background: url("../images/bg-left-btn.svg") no-repeat center / cover;
+
+    	.name {
+    		position: relative;
+
+    		&:before {
+    			content: "";
+    			position: absolute;
+    			top: 100%;
+    			left: 50%;
+    			transform: translate3d(-50%, 0, 0);
+    			height: 3px;
+    			width: 30px;
+    			border-radius: 2px;
+				background-color: var(--red, #E10000);
+				box-shadow: 0px 2px 10px 0px rgba(225, 0, 0, 0.50);
+    		}
+    	}
+    }
+
+    &.right {
+    	background: url("../images/bg-right-btn.svg") no-repeat center / cover;
+    }
+
+    .top {
+    	margin-bottom: 12px;
+    	display: flex;
+    	align-items: center;
+
+    	.name {
+    		font-size: 24px;
+    		font-weight: 700;
+    	}
+    }
+
+    .svg-icon {
+    	flex-shrink: 0;
+    	color: #E10000;
+    	margin-right: 14px;
+    	font-size: 20px;
+    }
+
+    .text {
+    	margin-bottom: 16px;
+		color: var(--grey2, #544F4F);
+		font-weight: 500;
+    }
+}
+
+.cols-4 {
+	display: flex;
+
+	.col {
+		width: 25%;
+	}
+}
+
+.cards {
+	gap: 18px;
+	margin-top: 14px;
+}
+
+.card {
+	text-align: center;
+	.name {
+		font-size: 18px;
+		font-weight: 700;
+		margin: 0 auto 8px;
+		max-width: 240px;
+	}
+	.text {
+		font-size: 12px;
+		line-height: 1.5
+	}
+	.box-img {
+		margin: 0 auto 15px;
+		width: 176px;
+		height: 150px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: url("../images/bg-card.svg") no-repeat center / cover;
+
+		.svg-icon {
+			font-size: 60px;
+			color: #E10000;
+			margin: 0 auto;
+		}
+	}
+}
+
+.columns-2 {
+	display: flex;
+	gap: 20px;
+	margin: 50px 0 84px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.column {
+		width: 50%;
+	}
+
+	.box-img {
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}

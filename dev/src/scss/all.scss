@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 // variables
 @import "includes/variables";
 // custom mixins
@@ -17,17 +19,17 @@ html{
 	-ms-text-size-adjust: 100%;
 }
 body{
-	font: #{$site_font_size}/#{$site_line_height} $default_font;
+	font: #{$font_weight} #{$site_font_size}/#{$site_line_height} $default_font;
 	// min-height:100%;
 	height: 100%;
-	min-width:320px;
-	position:relative;
-	color:$body_color;
-	background:$body_bg;
+	min-width: 320px;
+	position: relative;
+	color: $body_color;
+	background: $body_bg;
 }
 a{
-	color:$link_color;
-	text-decoration:none;
+	color: $link_color;
+	text-decoration: none;
 	// &:hover{
 	// 	text-decoration:underline;
 	// 	color:$link_hover_color;
@@ -111,7 +113,79 @@ input, textarea {
 	height: 100%;
 	table-layout: fixed;
 }
-.container{}
+
+.container{
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 20px;
+	@media(max-width: 768px){
+		padding: 0 10px;
+	}
+}
+
+.btn {
+	font-weight: 500;
+	font-size: 13px;
+	display: inline-block;
+	padding: 9px 22px;
+	border-radius: 5px;
+	border: 1px solid var(--red, #E10000);
+	background-color: var(--red, #E10000);
+	text-transform: uppercase;
+	box-shadow: 0px 2px 10px 0px rgba(225, 0, 0, 0.50);
+	transition: background-color .3s, color .3s, box-shadow .3s;
+
+	@media(hover: hover) and (pointer: fine){
+		&:hover{
+			color: #E10000;
+			background-color: transparent;
+		}
+	}
+
+	&.btn-secondary {
+		color: #E10000;
+		background-color: transparent;
+		box-shadow: none;
+
+		@media(hover: hover) and (pointer: fine){
+			&:hover{
+				background-color: var(--red, #E10000);
+				color: #fff;
+				box-shadow: 0px 2px 10px 0px rgba(225, 0, 0, 0.50);
+			}
+		}
+	}
+}
+
+.title {
+	font-size: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	.primary-text {
+		margin: 0 10px;
+	}
+}
+
+.primary-text {
+	color: var(--red, #E10000);
+	display: inline-block;
+	vertical-align: middle;
+
+	&.m-0 {
+		margin: 0;
+	}
+}
+
+.svg-icon {
+	display: block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
 //icon
 // [class^="icon-"], [class*=" icon-"] {
 // 	/* use !important to prevent issues with browser extensions that change fonts */

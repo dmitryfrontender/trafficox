@@ -5,3 +5,39 @@
 
 // @import 'includes/plugins';
 //
+
+.footer {
+	height: 1px;
+	display: table-row;
+}
+
+.footer-inner {
+	background-color: #272626;
+	color: #fff;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 90%;
+		width: 100%;
+		height: 172px;
+		background: url("../images/decor-up-dark.svg") no-repeat center / cover;
+	}
+}
+
+.footer-top {
+	padding: 34px 10px;
+	border-bottom: 1px solid #544F4F;
+}
+
+.footer-bottom {
+	padding: 26px 10px 20px;
+}
+
+.copy {
+	font-size: 12px;
+	color: #828282;
+}
