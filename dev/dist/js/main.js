@@ -7,13 +7,13 @@ var animationBull = bodymovin.loadAnimation({
 	renderer: "svg",
 	loop: true,
 	autoplay: true,
-	path: "../bull_animation.json"
+	path: "https://dmitryfrontender.github.io/trafficox/dev/dist/bull_animation.json"
 });
 
 var animationBgBull = bodymovin.loadAnimation({
 	container: document.getElementById("bg-bull-animation"),
 	renderer: "svg",
 	autoplay: !0,
-	path: "../bg_bull_animation.json"
+	path: "https://dmitryfrontender.github.io/trafficox/dev/dist/bg_bull_animation.json"
 });
 animationBgBull.setSpeed(2);
