@@ -24,11 +24,31 @@
 		text-transform: capitalize;
 		margin-left: 10px;
 		box-shadow: none;
+		flex-shrink: 0;
 	}
 
 	.wrap {
 		display: flex;
 		align-items: center;
+	}
+
+	.navbar {
+		@media(max-width: 768px){
+			margin: 0 0 0 50px;
+			padding-right: 0;
+			border-right: none;
+		}
+		@media(max-width: 640px){
+			display: none;
+		}
+	}
+}
+
+.mobile-logo {
+	display: none;
+
+	@media(max-width: 768px){
+		display: block;
 	}
 }
 
@@ -99,8 +119,15 @@
 	display: flex;
 	align-items: center;
 
+	@media(max-width: 768px){
+		display: none;
+	}
+
 	.strong {
 		font-size: 24px;
 		margin-left: 9px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 }

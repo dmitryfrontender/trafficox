@@ -25,16 +25,172 @@
 		width: 100%;
 		height: 172px;
 		background: url("../images/decor-up-dark.svg") no-repeat center / cover;
+		pointer-events: none;
+
+		@media(max-width: 910px){
+			background-size: contain;
+			bottom: 88%;
+		}
 	}
 }
 
 .footer-top {
-	padding: 34px 10px;
+	padding: 40px 10px 26px;
 	border-bottom: 1px solid #544F4F;
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+
+	@media(max-width: 768px){
+		padding-top: 20px;
+		flex-direction: column;
+		gap: 30px 0;
+	}
+
+	.headline {
+		text-align: left;
+		margin-bottom: 30px;
+
+		.title {
+			justify-content: flex-start;
+		}
+
+		.sub-text {
+			line-height: 1.6;
+			max-width: 450px;
+			margin: 0;
+		}
+	}
+
+	.list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 23px 40px;
+		max-width: 360px;
+
+		a {
+			display: block;
+
+			img {
+				display: block;
+			}
+		}
+	}
+
+	.cols {
+		display: flex;
+
+		@media(max-width: 480px){
+			flex-direction: column;
+			gap: 20px 0;
+		}
+	}
+}
+
+.user-box {
+	display: flex;
+	align-items: center;
+	margin-right: 78px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.name {
+		font-weight: 500;
+		margin-bottom: 9px;
+	}
+}
+
+.user-icon {
+	width: 64px;
+	height: 64px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	background-color: #2F2F2F;
+	color: #828282;
+}
+
+.user-info {
+	margin-left: 10px;
+}
+
+.social-list {
+	display: flex;
+	gap: 0 19px;
+
+	a {
+		color: #828282;
+		transition: color .3s;
+		font-size: 20px;
+
+		@media(hover: hover) and (pointer: fine){
+			&:hover{
+				color: #E10000;
+			}
+		}
+
+		&.telegram {
+			@media(hover: hover) and (pointer: fine){
+				&:hover{
+					color: #2BA2DF;
+				}
+			}
+		}
+
+		&.teams {
+			@media(hover: hover) and (pointer: fine){
+				&:hover{
+					color: #464FEB;
+				}
+			}
+		}
+	}
 }
 
 .footer-bottom {
 	padding: 26px 10px 20px;
+
+	.logo {
+		margin-right: 43px;
+
+		@media(max-width: 480px){
+			margin-right: 20px;
+		}
+		@media(max-width: 390px){
+			margin-right: 10px;
+
+			img {
+				width: 100px;
+			}
+		}
+	}
+
+	.wrap {
+		display: flex;
+		align-items: center;
+		margin-bottom: 18px;
+	}
+
+	.navbar {
+		padding-right: 0;
+		margin-right: 0;
+		border: none;
+
+		.nav-link {
+			@media(max-width: 480px){
+				margin-right: 20px;
+			}
+			@media(max-width: 390px){
+				margin-right: 10px;
+			}
+		}
+	}
 }
 
 .copy {
