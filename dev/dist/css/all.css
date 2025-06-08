@@ -422,9 +422,13 @@ input.placeholder, textarea.placeholder {
 	font-size: 24px;
 	font-weight: 700;
 	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 @media (max-width: 910px) {
 	.heading {
+		justify-content: center;
 		text-align: center;
 	}
 }
@@ -432,6 +436,9 @@ input.placeholder, textarea.placeholder {
 	.heading {
 		font-size: 20px;
 	}
+}
+.heading .primary-text {
+	margin-right: 7px;
 }
 
 .heading-text {
@@ -604,6 +611,14 @@ input.placeholder, textarea.placeholder {
 		bottom: calc(100% - 5px);
 	}
 }
+.section.bottom-bg.top-bg {
+	padding-bottom: 10px;
+}
+@media (max-width: 640px) {
+	.section.bottom-bg.top-bg {
+		padding-bottom: 20px;
+	}
+}
 @media (max-width: 910px) {
 	.section.bottom-bg {
 		margin-top: -1px;
@@ -701,6 +716,9 @@ input.placeholder, textarea.placeholder {
 .custom-wrap.left {
 	background: url("../images/bg-left-btn.svg") no-repeat center/cover;
 }
+.custom-wrap.left.second {
+	background: url("../images/bg-left-btn2.svg") no-repeat center/cover;
+}
 .custom-wrap.left .name {
 	position: relative;
 }
@@ -718,6 +736,9 @@ input.placeholder, textarea.placeholder {
 }
 .custom-wrap.right {
 	background: url("../images/bg-right-btn.svg") no-repeat center/cover;
+}
+.custom-wrap.right.second {
+	background: url("../images/bg-right-btn2.svg") no-repeat center/cover;
 }
 .custom-wrap .top {
 	margin-bottom: 12px;
