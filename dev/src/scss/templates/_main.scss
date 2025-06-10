@@ -387,6 +387,10 @@
 
     	&.second {
     		background: url("../images/bg-left-btn2.svg") no-repeat center / cover;
+
+    		.name:before {
+    			display: none;
+    		}
     	}
 
     	.name {
@@ -412,6 +416,23 @@
 
     	&.second {
     		background: url("../images/bg-right-btn2.svg") no-repeat center / cover;
+
+    		.name {
+    			position: relative;
+
+    			&:before {
+	    			content: "";
+	    			position: absolute;
+	    			top: 100%;
+	    			left: 50%;
+	    			transform: translate3d(-50%, 0, 0);
+	    			height: 3px;
+	    			width: 30px;
+	    			border-radius: 2px;
+					background-color: var(--red, #E10000);
+					box-shadow: 0px 2px 10px 0px rgba(225, 0, 0, 0.50);
+	    		}
+    		}
     	}
     }
 
